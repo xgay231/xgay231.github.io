@@ -1,5 +1,4 @@
 ---
 title: 归档
+layout: Archive
 ---
-
-# 归档

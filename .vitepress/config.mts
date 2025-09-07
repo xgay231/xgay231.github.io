@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { generateSidebar } from './theme/generateSidebar'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -14,6 +15,8 @@ export default defineConfig({
       { text: '笔记', link: '/notes/' },
       { text: '归档', link: '/page/archive' },
       { text: '关于', link: '/page/about' }
-    ]
+    ],
+
+    sidebar: generateSidebar()
   }
 })

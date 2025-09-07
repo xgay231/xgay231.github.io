@@ -1,5 +1,24 @@
-
-html {
-  font-family: Arial, Helvetica;
+/* 全局样式 */
+:root {
+  --vp-font-family-base: "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --vp-c-brand: #646cff;
+  --vp-c-brand-light: #747bff;
+  --vp-c-brand-dark: #535bf2;
 }
 
+/* 链接样式 */
+a {
+  color: var(--vp-c-brand);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+a:hover {
+  color: var(--vp-c-brand-light);
+}
+
+/* 代码块样式 */
+div[class*="language-"] {
+  border-radius: 8px;
+  margin: 1rem 0;
+}

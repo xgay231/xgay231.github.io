@@ -1,6 +1,6 @@
 import { createContentLoader } from 'vitepress'
 
-interface Post {
+interface Note {
   title: string
   url: string
   date: {
@@ -10,14 +10,14 @@ interface Post {
   excerpt: string | undefined
 }
 
-declare const data: Post[]
+declare const data: Note[]
 export { data }
 
-export default createContentLoader('posts/**/*.md', {
+export default createContentLoader('notes/**/*.md', {
   excerpt: true,
-  transform(raw): Post[] {
+  transform(raw): Note[] {
     return raw
-      .filter(page => page.frontmatter.date) // 过滤掉没有日期的页面
+      .filter(page => page.frontmatter.date)
       .map(({ url, frontmatter, excerpt }) => ({
         title: frontmatter.title,
         url,

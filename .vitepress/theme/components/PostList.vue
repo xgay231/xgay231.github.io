@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { data as allPosts } from '../posts.data'
-
-const posts = allPosts.filter(p => p.url.startsWith('/posts/'))
+import { data as posts } from '../posts.data'
 
 const pageSize = 10
 const currentPage = ref(1)
