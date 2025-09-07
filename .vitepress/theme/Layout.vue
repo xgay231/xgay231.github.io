@@ -2,16 +2,18 @@
 import { useData } from 'vitepress'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import Home from './components/Home.vue'
 
-// https://vitepress.dev/reference/runtime-api#usedata
-const { site, frontmatter } = useData()
+const { frontmatter } = useData()
 </script>
 
 <template>
   <div class="layout">
     <Header />
     <main class="main-container">
-      <Content />
+      <Home v-if="frontmatter.home" />
+      <PostList v-else-if="frontmatter.layout === 'PostList'" />
+      <Content v-else />
     </main>
     <Footer />
   </div>

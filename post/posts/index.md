@@ -1,5 +1,4 @@
 ---
 title: 文章
+layout: PostList
 ---
-
-# 文章列表
